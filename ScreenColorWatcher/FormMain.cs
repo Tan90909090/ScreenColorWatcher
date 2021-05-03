@@ -20,6 +20,7 @@ namespace ScreenColorWatcher
         {
             numericUpDownWatchX.Enabled = !IsWatching;
             numericUpDownWatchY.Enabled = !IsWatching;
+            numericUpDownlabelAllowDifferenceColorRange.Enabled = !IsWatching;
             buttonStart.Enabled = !IsWatching;
             buttonStop.Enabled = IsWatching;
         }
@@ -57,7 +58,10 @@ namespace ScreenColorWatcher
 
         private void buttonStart_Click(object sender, System.EventArgs e)
         {
-            _colorWatcher = new ColorWatcher(GetSpecifiedPositionColor(), DateTime.Now);
+            _colorWatcher = new ColorWatcher(
+                GetSpecifiedPositionColor(),
+                DateTime.Now,
+                (int)numericUpDownlabelAllowDifferenceColorRange.Value);
             UpdateControlStatus();
         }
 

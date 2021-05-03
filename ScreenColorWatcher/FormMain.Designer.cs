@@ -44,10 +44,13 @@ namespace ScreenColorWatcher
             this.timerWatch = new System.Windows.Forms.Timer(this.components);
             this.buttonClearLog = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelAllowDifferenceColorRange = new System.Windows.Forms.Label();
+            this.numericUpDownlabelAllowDifferenceColorRange = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrentMouseX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrentMouseY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWatchX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWatchY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownlabelAllowDifferenceColorRange)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxOutput
@@ -120,7 +123,7 @@ namespace ScreenColorWatcher
             // labelWatchX
             // 
             this.labelWatchX.AutoSize = true;
-            this.labelWatchX.Location = new System.Drawing.Point(12, 81);
+            this.labelWatchX.Location = new System.Drawing.Point(12, 67);
             this.labelWatchX.Name = "labelWatchX";
             this.labelWatchX.Size = new System.Drawing.Size(72, 12);
             this.labelWatchX.TabIndex = 1;
@@ -137,7 +140,7 @@ namespace ScreenColorWatcher
             // 
             // numericUpDownWatchX
             // 
-            this.numericUpDownWatchX.Location = new System.Drawing.Point(143, 79);
+            this.numericUpDownWatchX.Location = new System.Drawing.Point(143, 65);
             this.numericUpDownWatchX.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -154,7 +157,7 @@ namespace ScreenColorWatcher
             // 
             // numericUpDownWatchY
             // 
-            this.numericUpDownWatchY.Location = new System.Drawing.Point(143, 104);
+            this.numericUpDownWatchY.Location = new System.Drawing.Point(143, 90);
             this.numericUpDownWatchY.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -208,11 +211,32 @@ namespace ScreenColorWatcher
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 106);
+            this.label1.Location = new System.Drawing.Point(12, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 12);
             this.label1.TabIndex = 1;
             this.label1.Text = "色監視座標Y";
+            // 
+            // labelAllowDifferenceColorRange
+            // 
+            this.labelAllowDifferenceColorRange.AutoSize = true;
+            this.labelAllowDifferenceColorRange.Location = new System.Drawing.Point(12, 116);
+            this.labelAllowDifferenceColorRange.Name = "labelAllowDifferenceColorRange";
+            this.labelAllowDifferenceColorRange.Size = new System.Drawing.Size(79, 12);
+            this.labelAllowDifferenceColorRange.TabIndex = 1;
+            this.labelAllowDifferenceColorRange.Text = "許容する色ズレ";
+            // 
+            // numericUpDownlabelAllowDifferenceColorRange
+            // 
+            this.numericUpDownlabelAllowDifferenceColorRange.Location = new System.Drawing.Point(143, 114);
+            this.numericUpDownlabelAllowDifferenceColorRange.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.numericUpDownlabelAllowDifferenceColorRange.Name = "numericUpDownlabelAllowDifferenceColorRange";
+            this.numericUpDownlabelAllowDifferenceColorRange.Size = new System.Drawing.Size(67, 19);
+            this.numericUpDownlabelAllowDifferenceColorRange.TabIndex = 11;
             // 
             // FormMain
             // 
@@ -222,12 +246,14 @@ namespace ScreenColorWatcher
             this.Controls.Add(this.buttonClearLog);
             this.Controls.Add(this.buttonStop);
             this.Controls.Add(this.buttonStart);
+            this.Controls.Add(this.numericUpDownlabelAllowDifferenceColorRange);
             this.Controls.Add(this.numericUpDownWatchY);
             this.Controls.Add(this.numericUpDownCurrentMouseY);
             this.Controls.Add(this.numericUpDownWatchX);
             this.Controls.Add(this.numericUpDownCurrentMouseX);
             this.Controls.Add(this.labelOutput);
             this.Controls.Add(this.labelCurrentMouseY);
+            this.Controls.Add(this.labelAllowDifferenceColorRange);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelWatchX);
             this.Controls.Add(this.labelCurrentMouseX);
@@ -238,6 +264,7 @@ namespace ScreenColorWatcher
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCurrentMouseY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWatchX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWatchY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownlabelAllowDifferenceColorRange)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,6 +286,8 @@ namespace ScreenColorWatcher
         private System.Windows.Forms.Timer timerWatch;
         private System.Windows.Forms.Button buttonClearLog;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelAllowDifferenceColorRange;
+        private System.Windows.Forms.NumericUpDown numericUpDownlabelAllowDifferenceColorRange;
     }
 }
 
